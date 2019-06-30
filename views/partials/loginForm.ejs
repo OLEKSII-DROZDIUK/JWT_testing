@@ -1,0 +1,67 @@
+<div class="card card-block w-25 mx-auto">
+    <button class="btn btn-primary m-5" data-toggle="modal" data-target="#myLoginForm">Login</button>
+</div>
+
+<div class="modal fade" id="myLoginForm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="truearia-hidden=" true"="">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs mr-2">
+                            <li class="active mr-2 bg-success p-2">
+                                <a href="#Login" data-toggle="tab" class="text-white">Login</a>
+                            </li>
+                            <li class="ml-2 bg-light p-2">
+                                <a href="#Registration" data-toggle="tab" class="text-dark">Registration</a>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active container h-100" id="Login">
+                                <form action="/login/users" method="POST" role="form" class="needs-validation d-flex flex-column justify-content-center align-items-center" novalidate>
+                                    <div class="form-group col-10">
+                                        <label for="login" class="col-6 control-label">Login</label>
+                                        <input name="loginUser" type="text" class="form-control" id="loginUser" placeholder="Your login" required>
+                                        <div class="invalid-feedback">This field is required</div>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <label for="regPassword" class="col-6 control-label">Password</label>
+                                        <input name="passwordUser" type="password" class="form-control" id="passwordUser" placeholder="Your password" required>
+                                        <div class="invalid-feedback"></div>
+                                    </div>
+                                    <h2 class="text-danger text-center" id="loginFail"></h2>
+                                    <button type="submit" class="btn btn-primary btn-sm" id="logInBtn">Log in</button>
+                                </form>
+                            </div>
+                            <div class="tab-pane container h-100" id="Registration">
+                                <form action="/register" method="POST" role="form" class="needs-validation d-flex flex-column justify-content-center align-items-center" novalidate>
+                                    <div class="form-group col-10">
+                                        <label for="enterLogi" class="col-6 control-label">Enter your login</label>
+                                        <input type="text" class="form-control" id="enterLogin" placeholder="Login" required>
+                                        <div class="invalid-feedback">This field is required</div>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <label for="enterPasswordFirst" class="col-sm-6 control-label">Password</label>
+                                        <input type="password" class="form-control" id="enterPasswordFirst" placeholder="Password" required>
+                                        <div class="invalid-feedback">This field is required</div>
+                                    </div>
+                                    <div class="form-group col-10">
+                                        <label for="enterPasswordSecond" class="col-sm-6 control-label">Password</label>
+                                        <input type="password" class="form-control" id="enterPasswordSecond" placeholder="Confirm password" required>
+                                        <div class="invalid-feedback">This field is required</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm">Register new user</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
